@@ -14,9 +14,10 @@ RUN apt-get install python-pip
 RUN apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
 
 # Installation of Python 2.7.14
-RUN cd /usr/src
+#RUN cd /usr/src
 RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
-RUN tar xzf Python-2.7.14.tgz && cd Python-2.7.14.tgz && ./configure && make install
+RUN tar xzf Python-2.7.14.tgz
+RUN cd Python-2.7.14.tgz && ./configure --enable-optimations && make altinstall
 RUN apt-get update
 RUN apt-get install -y libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
 RUN pip install --upgrade pip
@@ -51,7 +52,7 @@ RUN apt-get install -y git
 
 # Installation of Java
 
-RUN  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
 RUN apt-get install -y software-properties-common
 RUN apt-get update && add-apt-repository ppa:webupd8team/java
 RUN apt-get install -y default-jre
