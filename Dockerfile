@@ -16,7 +16,7 @@ RUN apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqli
 # Installation of Python 2.7.14
 #RUN cd /usr/src
 RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
-RUN tar xzf Python-2.7.14.tgz && cd Python-2.7.14.tgz && ./configure --enable-optimations && make altinstall
+RUN tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall
 RUN apt-get update
 RUN apt-get install -y libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
 RUN pip install --upgrade pip
