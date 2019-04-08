@@ -1,22 +1,36 @@
 FROM ubuntu:16.04
-
-MAINTAINER "Ed Sherwin" <edsherwin.nonog@gmail.com>
-
-LABEL name="Docker build for acceptance testing using the robotframework"
-
-RUN apt-get update
-RUN apt-get install -y build-essential libssl-dev libffi-dev python-dev
-RUN apt-get install -y python-pip python-dev gcc phantomjs firefox
-RUN apt-get install -y xvfb zip wget
-RUN apt-get install ca-certificates
-RUN apt-get install ntpdate
-RUN apt-get install python-pip
-RUN apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+MAINTAINER "Ed Sherwin I. Nonog" <edsherwin.nonog@gmail.com>
+LABEL name="Docker image of robotframework environment installed in different flavors of ubuntu."
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    python-dev \
+    python-pip \
+    python-dev \
+    gcc \
+    phantomjs \
+    firefox \
+    xvfb \
+    wget \
+    ca-certificates \
+    ntpdate \
+    libreadline-gplv2-dev \
+    libncursesw5-dev \
+    libsqlite3-dev \
+    libsqlite3-dev \
+    tk-dev \
+    libgdbm-dev \
+    libc6-dev \
+    libbz2-dev
 
 # Installation of Python 2.7.14
-#RUN cd /usr/src
+RUN cd /usr/src
 RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
 RUN tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall
+RUNapt-get install -y python-tk
 RUN apt-get update
 RUN apt-get install -y libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
 RUN pip install --upgrade pip
@@ -36,6 +50,7 @@ RUN pip install ndg-httpsclient
 RUN pip install pyopenssl
 RUN pip install pyasn1
 RUN pip install robotframework-jsonlibrary
+RUN pip install robotframework-faker
 #RUN pip install --upgrade robotframework-httplibrary
 
 # Geckodriver & Chromedriver
