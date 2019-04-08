@@ -8,7 +8,7 @@ Library           FakerLibrary
 #Library           HttpLibrary.HTTP
 Library           Collections
 Library           RequestsLibrary
-Resource          ../../resources/scalars/google/_google.txt
+Resource          ../../resources/scalars/google/google_path.txt
 
 *** Keywords ***
 Open Google
