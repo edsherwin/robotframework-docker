@@ -2,7 +2,7 @@
 It works!
 
 # Prerequisite
-- Installed Docker
+1. Installed Docker
 
 # Installed Robot Framework Libraries
 
@@ -12,3 +12,4 @@ It works!
 4. [HttpLibrary]()
 5. [SSHLibrary]()
 6. [ExcelLibrary]()
+7. [FakerLibrary]()
