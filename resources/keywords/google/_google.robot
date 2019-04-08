@@ -9,7 +9,6 @@ Library           FakerLibrary
 Library           Collections
 Library           RequestsLibrary
 Resource          ../../resources/scalars/google/_google.txt
-Resource          ../../resources/scalars/google/_google.txt
 
 *** Keywords ***
 Open Google
