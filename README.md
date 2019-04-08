@@ -1,4 +1,5 @@
 ## Introduction
+
 It works!
 
 ## Prerequisite
@@ -8,10 +9,19 @@ It works!
 
 ## Installed Robot Framework Libraries
 
-1. [Selenium2Library](https://github.com/robotframework/Selenium2Library)
-2. [XvfbLibrary](https://github.com/drobota/robotframework-xvfb)
-3. [JSONLibrary]()
-4. [HttpLibrary]()
-5. [SSHLibrary]()
-6. [ExcelLibrary]()
-7. [FakerLibrary]()
+- [Selenium2Library](https://github.com/robotframework/Selenium2Library)
+- [XvfbLibrary](https://github.com/drobota/robotframework-xvfb)
+- [JSONLibrary]()
+- [HttpLibrary]()
+- [SSHLibrary]()
+- [ExcelLibrary]()
+- [FakerLibrary]()
+
+## Other Installed Applications
+
+- Python 2.14
+- Java 8
+- Chromedriver 73.0.3683.68
+- Google Chrome 73.0.3683.103
+- Firefox
+- Geckodriver
