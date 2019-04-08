@@ -1,0 +1,8 @@
+Library/highlight.pyc
+log.html
+output.xml
+report.html
+*.png
+Results/*.xml
+Results/*.html
+resources/keywords/setup/Global_Setup_and_Teardown.robot
