@@ -1,0 +1,16 @@
+*** Variables ***
+${Google_Search}    //input[@title='Search']
+${PBP_Footer}     //a[contains(text(),'Philippine Business Portal')]
+${EaseofDoingBusinessLaw_Footer}    //a[contains(text(),'Ease of Doing Business Law')]
+${ProjectPartners_Footer}    //a[contains(text(),'Project Partners')]
+${Browse_Footer}    //p[contains(text(),'BROWSE')]
+${FrequentlyAskedQuestions_Footer}    //a[contains(text(),'Frequently Asked Questions')]
+${ContactUs_Footer}    //a[contains(text(),'Contact Us')]
+${HowTo_Footer}    //p[contains(text(),'HOW TO')]
+${GetYourBusinessPermit_Footer}    //a[contains(text(),'Get your Business Permit')]
+${GovPhDirectory_Footer}    //a[contains(text(),'GOVPH Directory')]
+${PBD_Footer}     //a[contains(text(),'Philippine Business Databank')]
+${FreedomofInfo_Footer}    //a[contains(text(),'Freedom of Information')]
+${OpenData_Footer}    //a[contains(text(),'Open Data')]
+${GSC_Footer}     //a[contains(text(),'Government Solutions Center')]
+${URL}            https://www.google.com/

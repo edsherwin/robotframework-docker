@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
 RUN cd /usr/src
 RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
 RUN tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall
-RUN apt-get install -y python-tk
+RUN sapt-get install -y python-tk
 RUN apt-get update
 RUN apt-get install -y libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
 RUN pip install --upgrade pip
