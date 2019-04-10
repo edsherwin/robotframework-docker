@@ -11,7 +11,7 @@ Library           FakerLibrary
 Resource          ../../resources/scalars/google/google_path.txt
 Resource          ../../resources/keywords/google/search.robot
 *** Test Cases ***
-Footer_Validation
+Verify Google Search
     [Documentation]    This TC will open google.com
     ...
     ...    @Author: Ed
