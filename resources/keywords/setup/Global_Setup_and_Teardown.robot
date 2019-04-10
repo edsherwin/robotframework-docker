@@ -10,12 +10,12 @@ Library           RequestsLibrary
 *** Keywords ***
 Setup
     [Arguments]    ${URL}
-    Start Virtual Display    1920    1080
-    Open Browser    ${URL}    Chrome
-    #Run Keyword If    '''${BROWSER}'''=='''chrome'''    Open Chrome In Headless    ${URL}
-    #Run Keyword Unless    '''${BROWSER}'''=='''chrome'''    Start Virtual Display    1920    1080
-    #Run Keyword Unless    '''${BROWSER}'''=='''chrome'''    Open Browser    ${URL}    ${BROWSER}
-    #Run Keyword Unless    '''${BROWSER}'''=='''chrome'''    Open Browser    ${URL}    chrome
+    #Start Virtual Display    1920    1080
+    #Open Browser    ${URL}    Chrome
+    Run Keyword If    '''${BROWSER}'''=='''chrome'''    Open Chrome In Headless    ${URL}
+    Run Keyword Unless    '''${BROWSER}'''=='''chrome'''    Start Virtual Display    1920    1080
+    Run Keyword Unless    '''${BROWSER}'''=='''chrome'''    Open Browser    ${URL}    ${BROWSER}
+    Run Keyword Unless    '''${BROWSER}'''=='''chrome'''    Open Browser    ${URL}    chrome
 
 Teardown
     Close Browser
