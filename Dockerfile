@@ -28,11 +28,19 @@ RUN apt-get update && apt-get install -y \
 
 # Installation of Python 2.7.14
 RUN cd /usr/src
-RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
-RUN tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall
-RUN apt-get install -y python-tk
+RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz && tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall \
+    apt-get update && apt-get install -y \
+    python-tk \
+    libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
+
+# Robot Framework Installation
+RUN apt-get update && pip install \
+    robotframework \
+    robotframework-sshlibrary \
+    robotframework-selenium2library \
+
+
 RUN apt-get update
-RUN apt-get install -y libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
 RUN pip install --upgrade pip
 RUN pip install robotframework
 RUN pip install robotframework-sshlibrary
@@ -66,13 +74,17 @@ RUN cp chromedriver /usr/local/bin && chmod +x /usr/local/bin/chromedriver
 RUN apt-get install -y git
 
 # Installation of Java
-
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-RUN apt-get install -y software-properties-common
-RUN apt-get update && add-apt-repository ppa:webupd8team/java
-RUN apt-get install -y default-jre
-RUN apt-get install -y default-jdk
-RUN apt-get update
+RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && apt-get update && apt-get install -y \
+    software-properties-common \
+    add-apt-repository ppa:webupd8team/java \
+    apt-get update \
+    apt-get install -y \
+    default-jre \
+    default-jdk \
+    oracle-java8-installer \
+RUN apt-get -y autoclean \
 RUN rm -fR /var/lib/apt/lists/*
-RUN apt-get -y update
-RUN apt-get install -y oracle-java8-installer
+
+# Setting up the container and attach to jenkins as build node
+COPY ../jenkins-agent.sh /usr/src/app
+CMD ["jenkins-agent.sh","start"]
