@@ -24,54 +24,46 @@ RUN apt-get update && apt-get install -y \
     tk-dev \
     libgdbm-dev \
     libc6-dev \
-    libbz2-dev
+    libbz2-dev \
+    unzip \
+    git \
+    python-tk
 
 # Installation of Python 2.7.14
-RUN cd /usr/src
-RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz && tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall \
-    apt-get update && apt-get install -y \
-    python-tk \
+RUN cd /usr/src && wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz \
+    && tar xzf Python-2.7.14.tgz && cd Python-2.7.14 \
+    && ./configure --enable-optimations && make altinstall \
+    apt-get update \
     libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
 
-# Robot Framework Installation
+# Robot Framework and Libraries
 RUN apt-get update && pip install \
     robotframework \
     robotframework-sshlibrary \
     robotframework-selenium2library \
-
-
-RUN apt-get update
-RUN pip install --upgrade pip
-RUN pip install robotframework
-RUN pip install robotframework-sshlibrary
-RUN pip install robotframework-selenium2library
-RUN pip install -U robotframework-httplibrary
-RUN pip install -U requests[security] && pip install -U robotframework-requests
-RUN pip install robotframework-xvfb
-RUN pip install certifi
-RUN pip install urllib3[secure]
-RUN pip install robotframework-excellibrary
-RUN pip install openpyxl
-RUN pip install pyyaml
-RUN pip install Pillow
-RUN pip install ndg-httpsclient
-RUN pip install pyopenssl
-RUN pip install pyasn1
-RUN pip install robotframework-jsonlibrary
-RUN pip install robotframework-faker
-RUN apt-get install -y unzip
-#RUN pip install --upgrade robotframework-httplibrary
+    robotframework-httplibrary \
+    robotframework-requests \
+    robotframework-xvfb \
+    robotframework-jsonlibrary \
+    robotframework-faker \
+    robotframework-excellibrary \
+    certifi \
+    urllib3[secure] \
+    openpyxl \
+    pyyaml \
+    Pillow \
+    ndg-httpsclient \
+    pyasn1
 
 # Geckodriver & Chromedriver
-RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
-RUN tar xvzf geckodriver-v0.11.1-linux64.tar.gz
-RUN rm geckodriver-v0.11.1-linux64.tar.gz
-RUN cp geckodriver /usr/local/bin && chmod +x /usr/local/bin/geckodriver
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN dpkg -i google-chrome*.deb
-RUN wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip && unzip chromedriver_linux64.zip
-RUN cp chromedriver /usr/local/bin && chmod +x /usr/local/bin/chromedriver
-RUN apt-get install -y git
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz \
+    && tar xvzf geckodriver-v0.11.1-linux64.tar.gz \
+    && rm geckodriver-v0.11.1-linux64.tar.gz \
+    && cp geckodriver /usr/local/bin && chmod +x /usr/local/bin/geckodriver \
+    && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+    && dpkg -i google-chrome*.deb \
+    && wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip && unzip chromedriver_linux64.zip \
+    && cp chromedriver /usr/local/bin && chmod +x /usr/local/bin/chromedriver
 
 # Installation of Java
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && apt-get update && apt-get install -y \
@@ -86,5 +78,5 @@ RUN apt-get -y autoclean \
 RUN rm -fR /var/lib/apt/lists/*
 
 # Setting up the container and attach to jenkins as build node
-COPY ../jenkins-agent.sh /usr/src/app
+COPY bin/jenkins-agent.sh /usr/src/app
 CMD ["jenkins-agent.sh","start"]
