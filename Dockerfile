@@ -30,11 +30,9 @@ RUN apt-get update && apt-get install -y \
     python-tk
 
 # Installation of Python 2.7.14
-RUN cd /usr/src && wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz \
-    && tar xzf Python-2.7.14.tgz && cd Python-2.7.14 \
-    && ./configure --enable-optimations && make altinstall \
+RUN cd /usr/src && wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz && tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall \
     apt-get update
-#    libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
+#   libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
 
 # Robot Framework and Libraries
 RUN apt-get update && pip install \
