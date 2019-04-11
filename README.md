@@ -27,6 +27,8 @@ It works!
 - Geckodriver
 
 ## Usage
+The command below execute in headless.
 ```sh
 robot --variable BROWSER:chrome -x junit.xml --outputdir Results --timestampoutputs project/google/google-search.robot && rebot --outputdir Results --output output.xml --merge results/output-*.xml
 ```
+## Set container as build agent
