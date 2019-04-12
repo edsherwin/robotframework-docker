@@ -61,7 +61,8 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckod
     cp geckodriver /usr/local/bin && chmod +x /usr/local/bin/geckodriver \
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     dpkg -i google-chrome*.deb \
-    wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip && unzip chromedriver_linux64.zip \
+    wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip \
+    unzip chromedriver_linux64.zip \
     cp chromedriver /usr/local/bin && chmod +x /usr/local/bin/chromedriver
 
 # Installation of Java
