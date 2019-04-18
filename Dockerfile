@@ -54,25 +54,31 @@ RUN apt-get update && pip install \
     pyasn1
 
 # Geckodriver & Chromedriver
+RUN cd /usr/src \
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz \
-    && tar xvzf geckodriver-v0.11.1-linux64.tar.gz \
-    && rm geckodriver-v0.11.1-linux64.tar.gz \
-    && cp geckodriver /usr/local/bin && chmod +x /usr/local/bin/geckodriver \
-    && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    && dpkg -i google-chrome*.deb \
-    && wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip && unzip chromedriver_linux64.zip \
-    && cp chromedriver /usr/local/bin && chmod +x /usr/local/bin/chromedriver
+    tar xvzf geckodriver-v0.11.1-linux64.tar.gz \
+    rm geckodriver-v0.11.1-linux64.tar.gz \
+    cp geckodriver /usr/local/bin \
+    chmod +x /usr/local/bin/geckodriver \
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+    dpkg -i google-chrome*.deb \
+    wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip \
+    unzip chromedriver_linux64.zip \
+    cp chromedriver /usr/local/bin \
+    chmod +x /usr/local/bin/chromedriver
 
 # Installation of Java
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && apt-get update && apt-get install -y \
+#RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+RUN apt-get update \
+    apt-get install -y \
     software-properties-common \
     add-apt-repository ppa:webupd8team/java \
-    apt-get update \
-    apt-get install -y \
+    apt-get update && apt-get install -y \
     default-jre \
     default-jdk \
-    oracle-java8-installer \
-RUN apt-get -y autoclean \
+    oracle-java8-installer
+    
+RUN apt-get -y autoclean
 RUN rm -fR /var/lib/apt/lists/*
 
 # Setting up the container and attach to jenkins as build node
