@@ -1,4 +1,6 @@
 # **Test Inside Containers:** Dockerize Robot Framework Tests
+[![HitCount](http://hits.dwyl.io/edsherwin/robotframework-docker.svg)](http://hits.dwyl.io/edsherwin/robotframework-docker)
+
 
 It works!
 
