@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER "Ed Sherwin I. Nonog" <edsherwin.nonog@gmail.com>
-LABEL name="Docker image of robotframework environment installed in different flavors of ubuntu."
+LABEL name="Docker image of robotframework environment."
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 RUN apt-get update && apt-get install -y \
@@ -84,4 +84,4 @@ RUN apt-get install -y \
 
 # Setting up the container and attach to jenkins as build node
 COPY bin/jenkins-agent.sh /usr/src/app
-CMD ["jenkins-agent.sh","start"]
+#CMD ["jenkins-agent.sh","start"]
