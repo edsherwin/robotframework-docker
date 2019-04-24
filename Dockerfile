@@ -68,18 +68,17 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckod
     chmod +x /usr/local/bin/chromedriver
 
 # Installation of Java
-#RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-RUN apt-get update && apt-get install -y \
-    software-properties-common
-#Java
-RUN add-apt-repository ppa:webupd8team/java
-RUN apt-get update
-RUN apt-get install -y \
-    oracle-java8-installer \
-    default-jre \
-    default-jdk
-RUN apt-get -y autoclean
-RUN rm -fR /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends locales && \
+    locale-gen en_US.UTF-8 && \
+    apt-get dist-upgrade -y && \
+    apt-get --purge remove openjdk* && \
+    echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections && \
+    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" > /etc/apt/sources.list.d/webupd8team-java-trusty.list && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886 && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends oracle-java8-installer oracle-java8-set-default && \
+    apt-get clean all
 
 # Setting up the container and attach to jenkins as build node
 COPY bin/jenkins-agent.sh /usr/src/app
