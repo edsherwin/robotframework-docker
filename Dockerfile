@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER "Ed Sherwin I. Nonog" <edsherwin.nonog@gmail.com>
-LABEL name="Docker image of robotframework environment installed in different flavors of ubuntu."
+LABEL name="Docker image of robotframework environment."
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 RUN apt-get update && apt-get install -y \
@@ -69,16 +69,19 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckod
 
 # Installation of Java
 #RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-#RUN apt-get update && apt-get install -y \
-#    software-properties-common
-
-#RUN add-apt-repository ppa:webupd8team/java
-#RUN apt-get update \
-#    apt-get install -y default-jre && default-jdk && oracle-java8-installer
+RUN apt-get update && apt-get install -y \
+    software-properties-common
+#Java
+RUN add-apt-repository ppa:webupd8team/java
+RUN apt-get update
+RUN apt-get install -y \
+    default-jre \
+    default-jdk \
+    oracle-java8-installer
 
 #RUN apt-get -y autoclean
 #RUN rm -fR /var/lib/apt/lists/*
 
 # Setting up the container and attach to jenkins as build node
 COPY bin/jenkins-agent.sh /usr/src/app
-CMD ["jenkins-agent.sh","start"]
+#CMD ["jenkins-agent.sh","start"]
