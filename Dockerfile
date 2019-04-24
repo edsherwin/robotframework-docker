@@ -75,12 +75,11 @@ RUN apt-get update && apt-get install -y \
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update
 RUN apt-get install -y \
+    oracle-java8-installer \
     default-jre \
-    default-jdk \
-    oracle-java8-installer
-
-#RUN apt-get -y autoclean
-#RUN rm -fR /var/lib/apt/lists/*
+    default-jdk
+RUN apt-get -y autoclean
+RUN rm -fR /var/lib/apt/lists/*
 
 # Setting up the container and attach to jenkins as build node
 COPY bin/jenkins-agent.sh /usr/src/app
