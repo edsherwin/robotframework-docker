@@ -75,7 +75,6 @@ RUN apt-get update -y \
     echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections \
     echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections \
     apt-get update -y \
-    #echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
     apt-get install -y oracle-java8-installer \
     apt-get clean
 # RUN apt-get update && \
