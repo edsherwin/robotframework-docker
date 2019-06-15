@@ -68,13 +68,13 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckod
     chmod +x /usr/local/bin/chromedriver
 
 # Installation of Java
-RUN apt-get update -y \
-    apt-get -y install software-properties-common \
-    add-apt-repository -y ppa:webupd8team/java \
-    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections \
-    echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections \
-    apt-get update -y \
-    apt-get -y install oracle-java8-installer \
+RUN apt-get update -y && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository -y ppa:webupd8team/java && \
+    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+    echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections && \
+    apt-get update -y && \
+    apt-get -y install oracle-java8-installer && \
     apt-get clean
 # RUN apt-get update && \
 #     apt-get install -y software-properties-common && \
