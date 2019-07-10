@@ -1,8 +1,11 @@
-Library/highlight.pyc
+library/highlight.pyc
 log.html
 output.xml
 report.html
 *.png
-Results/*.xml
-Results/*.html
-resources/keywords/setup/Global_Setup_and_Teardown.robot
+results/*.xml
+results/*.html
+library/allure-robotframework-0.1.3
+library/robotframework-allurereport
+geckodriver.log
+Library/__pycache__

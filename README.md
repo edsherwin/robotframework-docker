@@ -3,7 +3,9 @@
 [![HitCount](http://hits.dwyl.io/edsherwin/robotframework-docker.svg)](http://hits.dwyl.io/edsherwin/robotframework-docker)
 
 
-It works!
+# Introduction
+
+The automation test scripts will be executed inside the containers.
 
 ## Prerequisite
 
@@ -37,5 +39,26 @@ robot --variable BROWSER:chrome -x junit.xml --outputdir Results --timestampoutp
 ## Set container as build agent
 
 ```sh
-nohup java -jar agent.jar -jnlpUrl http://127.0.0.1:8080/computer/container-16-01/slave-agent.jnlp -secret 9792b05d5110043f31731e0d4907d3288198f4aacdcbf2dcb71e2f4087e855c5 &
+nohup java -jar agent.jar -jnlpUrl http://localhost:8080/computer/container-16-01/slave-agent.jnlp -secret 9792b05d5110043f31731e0d4907d3288198f4aacdcbf2dcb71e2f4087e855c5 &
+```
+
+### Global Setup and Teardown
+
+When updating the Global Setup and Teardown robot file to be able to run test scripts on local machines, run the following command (this command is used in order to tell Git to ignore changes on the file being mentioned):
+```sh
+git update-index --assume-unchanged resources/keywords/setup/Global_Setup_and_Teardown.robot
+```
+
+When pulling updates from the repository, run the following command in order to remove the error regarding the Global Setup and Teardown robot file (this command resets your changes on the Global Setup and Teardown file to enable you to pull changes from the repository):
+```sh
+git checkout resources/keywords/setup/Global_Setup_and_Teardown.robot
+```
+
+# Docker
+
+Rebuilding the images and containers
+
+```sh
+$ docker-compose build
+$ docker-compose up -d
 ```
