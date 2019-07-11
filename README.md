@@ -73,8 +73,8 @@ $ docker-compose up -d
 
 Environment variables
 
-Name = BROWSER
-Value = name of browser to used. e.g. chrome
+- Name: BROWSER
+- Value: name of browser to used. e.g. chrome
 
 
 
