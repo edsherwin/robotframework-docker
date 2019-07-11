@@ -26,10 +26,10 @@ Vefify Facebook Login Form
     Verify Login form
     [Teardown]    Teardown
 
-# Verfiy Signup Form
-#     [Documentation]    This Test Case will verify the fields in the signup form.
-#     ...
-#     ...    @Author: Ed
-#     [Setup]    Setup    ${URL}
-#     Verify Sign Up form
-#     [Teardown]    Teardown
+Verfiy Signup Form
+    [Documentation]    This Test Case will verify the fields in the signup form.
+    ...
+    ...    @Author: Ed
+    [Setup]    Setup    ${URL}
+    Verify Sign Up form
+    [Teardown]    Teardown
