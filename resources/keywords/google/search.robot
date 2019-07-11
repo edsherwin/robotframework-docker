@@ -8,7 +8,7 @@ Library           FakerLibrary
 #Library           HttpLibrary.HTTP
 Library           Collections
 Library           RequestsLibrary
-Resource          /usr/app/robotframework-docker/resources/scalars/google/google_path.txt
+Resource          ../../scalars/google/google_path.txt
 
 *** Keywords ***
 Open Google
