@@ -10,7 +10,7 @@ services:
     volumes:
       - robotframework_data:/usr/src/app
     container_name: robotframework-16.04-01
-    entrypoint: /jenkins-slave.sh
+    entrypoint: /docker-entrypoint.sh
     #restart: always
     tty: true
 
@@ -29,4 +29,3 @@ services:
 volumes:
   robotframework_data:
     driver: local
-

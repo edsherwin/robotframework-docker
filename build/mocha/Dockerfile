@@ -4,15 +4,9 @@ MAINTAINER "Ed Sherwin" <edsherwin.nonog@gmail.com>
 
 LABEL name="Docker build for acceptance testing using the robot framework"
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-ADD driver.sh /driver.sh
-COPY driver.sh /driver.sh
-COPY java.sh /java.sh
-COPY agent.jar /agent.jar
-ADD jenkins-slave.sh /jenkins-slave.sh
-COPY jenkins-slave.sh /jenkins-slave.sh
-RUN chmod +x /*.sh
+#ENTRYPOINT OF SLAVE TO BE CONNECTED THROUGH JENKINS
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -41,12 +35,10 @@ RUN apt-get update && apt-get install -y \
     python-tk \
     libnss3
 
-# Installation of Python 2.7.14
-RUN cd /usr/src
+# PYTHON INSTALLATION
 RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz && tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall
-#   libnss3-dev libxss1 libappindicator3-1 libindicator7 gconf-service libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation
 
-# Robot Framework and Libraries
+# ROBOTFRAMEWORK INSTALLATION
 RUN apt-get update && pip install \
     robotframework \
     robotframework-sshlibrary \
@@ -65,8 +57,15 @@ RUN apt-get update && pip install \
     ndg-httpsclient \
     pyasn1 \
     robotframework-metrics==3.1.2
-# Installation script for setting up browser
-RUN /driver.sh
-RUN /java.sh
 
-#CMD ["jenkins-slave.sh"]
+
+#COPY ALL TO WORKING DIRECTORY
+COPY . /usr/app
+
+WORKDIR /usr/app
+
+RUN chmod +x *.sh
+
+# INSTALLATION OF BROWSER DRIVER AND JAVA
+RUN ./driver.sh
+RUN ./java.sh
