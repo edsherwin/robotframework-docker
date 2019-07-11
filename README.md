@@ -36,10 +36,12 @@ The command below execute in headless.
 ```sh
 robot --variable BROWSER:chrome -x junit.xml --outputdir Results --timestampoutputs project/google/google-search.robot && rebot --outputdir Results --output output.xml --merge results/output-*.xml
 ```
-## Set container as build agent
+## Setting the container as build agent along with Jenkins
+
+Below command is configured through Jenkins. 
 
 ```sh
-nohup java -jar agent.jar -jnlpUrl http://localhost:8080/computer/container-16-01/slave-agent.jnlp -secret 9792b05d5110043f31731e0d4907d3288198f4aacdcbf2dcb71e2f4087e855c5 &
+$ nohup java -jar agent.jar -jnlpUrl http://localhost:8080/computer/cotainer-build-01/slave-agent.jnlp -secret 75c7c48273db32fdcb0e72d8032cc28f80348974c5fc9e88012df9fa7b6f8e7e &
 ```
 
 ### Global Setup and Teardown
