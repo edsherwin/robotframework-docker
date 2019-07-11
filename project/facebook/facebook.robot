@@ -8,8 +8,8 @@ Library           OperatingSystem
 #Library           HttpLibrary.HTTP
 #Library           ../../Library/highlight.py
 Library           FakerLibrary
-Resource          ../../resources/scalars/google/google_path.txt
-Resource          ../../resources/keywords/google/search.robot
+Resource          ../../resources/scalars/facebook/facebook_path.txt
+Resource          ../../resources/keywords/facebook/dashboard.robot
 *** Test Cases ***
 Verify Google Search
     [Documentation]    This TC will open google.com
