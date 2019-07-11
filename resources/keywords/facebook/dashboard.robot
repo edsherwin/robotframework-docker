@@ -22,7 +22,7 @@ Verify Login form
     Element Should Be Visible    ${password_label}
     Element Should Be Visible    ${username_field}
     Element Should Be Visible    ${password_field}
-    Element Should Be Visible    ${forgot_account_link}
+    #Element Should Be Visible    ${forgot_account_link}
 
 # Verify Sign Up form
 #     Set Selenium Speed    1

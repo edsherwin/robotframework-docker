@@ -18,7 +18,7 @@ Verify Facebook
     Open Facebook
     [Teardown]    Teardown
 
-Validate Facebook Login Form
+Vefify Facebook Login Form
     [Documentation]    This Test Case check the fields in the form.
     ...
     ...    @Author: Ed
@@ -26,10 +26,10 @@ Validate Facebook Login Form
     Verify Login form
     [Teardown]    Teardown
 
-Verfiy Signup Form
-    [Documentation]    This Test Case will verify the fields in the signup form.
-    ...
-    ...    @Author: Ed
-    [Setup]    Setup    ${URL}
-    Verify Sign Up form
-    [Teardown]    Teardown
+# Verfiy Signup Form
+#     [Documentation]    This Test Case will verify the fields in the signup form.
+#     ...
+#     ...    @Author: Ed
+#     [Setup]    Setup    ${URL}
+#     Verify Sign Up form
+#     [Teardown]    Teardown
