@@ -19,7 +19,7 @@ Verify Facebook
     Open Facebook
     [Teardown]    Teardown
 
-Validate Facebook Form
+Validate Facebook Login Form
     [Documentation]    This Test Case check the fields in the form.
     ...
     ...    @Author: Ed

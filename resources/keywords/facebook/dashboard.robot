@@ -5,8 +5,7 @@ Library           XvfbRobot
 Library           JSONLibrary
 Library           OperatingSystem
 Library           FakerLibrary
-#Library           HttpLibrary.HTTP
-Library           Collections
+Library           Collections    #Library    HttpLibrary.HTTP
 Library           RequestsLibrary
 Resource          ../../scalars/facebook/facebook_path.txt
 
@@ -18,7 +17,6 @@ Open Facebook
 
 Verify Login form
     Set Selenium Speed    1
-    Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${username_field}
-    Element Should Be Visible   ${email_phone_label}
-    Element Should Be Visible   ${password_label}
-
+    Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${password_field}
+    Element Should Be Visible    ${password_field}
+    Element Should Be Visible    ${password_label}
