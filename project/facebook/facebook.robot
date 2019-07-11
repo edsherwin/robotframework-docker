@@ -5,14 +5,13 @@ Library           Selenium2Library
 Library           XvfbRobot
 Library           JSONLibrary
 Library           OperatingSystem
-#Library           HttpLibrary.HTTP
-#Library           ../../Library/highlight.py
-Library           FakerLibrary
+Library           FakerLibrary    #Library    HttpLibrary.HTTP    #Library    ../../Library/highlight.py
 Resource          ../../resources/scalars/facebook/facebook_path.txt
 Resource          ../../resources/keywords/facebook/dashboard.robot
+
 *** Test Cases ***
 Verify Facebook
-    [Documentation]    This TC will open facebook.com
+    [Documentation]    This Test Case will open facebook.com
     ...
     ...    @Author: Ed
     [Setup]    Setup    ${URL}
@@ -25,4 +24,12 @@ Validate Facebook Login Form
     ...    @Author: Ed
     [Setup]    Setup    ${URL}
     Verify Login form
+    [Teardown]    Teardown
+
+Verfiy Signup Form
+    [Documentation]    This Test Case will verify the fields in the signup form.
+    ...
+    ...    @Author: Ed
+    [Setup]    Setup    ${URL}
+    Verify Sign Up form
     [Teardown]    Teardown
