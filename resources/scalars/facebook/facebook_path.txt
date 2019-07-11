@@ -4,6 +4,6 @@ ${URL}            https://www.facebook.com/
 ${username_field}    //input[@id='email']
 ${password_field}    //input[@id='pass']
 ${login_button}    //input[@id='u_0_10']
-${email_phone_label}    //label[contains(text(),'Email or Phone')]
+${email_phone_label}    //label[contains(text(),'Email')]
 ${password_label}    //label[contains(text(),'Password')]
 ${forgot_account_label}    //label[contains(text(),'Forgot account?')]
