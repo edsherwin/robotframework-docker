@@ -11,10 +11,18 @@ Library           FakerLibrary
 Resource          ../../resources/scalars/facebook/facebook_path.txt
 Resource          ../../resources/keywords/facebook/dashboard.robot
 *** Test Cases ***
-Verify Google Search
+Verify Facebook
     [Documentation]    This TC will open facebook.com
     ...
     ...    @Author: Ed
     [Setup]    Setup    ${URL}
     Open Facebook
+    [Teardown]    Teardown
+
+Validate Facebook Form
+    [Documentation]    This Test Case check the fields in the form.
+    ...
+    ...    @Author: Ed
+    [Setup]    Setup    ${URL}
+    Verify Login form
     [Teardown]    Teardown

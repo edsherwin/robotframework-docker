@@ -16,4 +16,9 @@ Open Facebook
     Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${username_field}
     Element Should Be Visible    ${username_field}
 
+Verify Login form
+    Set Selenium Speed    1
+    Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${username_field}
+    Element Should Be Visible   ${email_phone_label}
+    Element Should Be Visible   ${password_label}
 
