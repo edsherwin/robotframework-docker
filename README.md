@@ -41,7 +41,7 @@ robot --variable BROWSER:chrome -x junit.xml --outputdir Results --timestampoutp
 Below command is configured through Jenkins. 
 
 ```sh
-$ java -jar agent.jar -jnlpUrl http://localhost:8080/computer/cotainer-build-01/slave-agent.jnlp -secret 75c7c48273db32fdcb0e72d8032cc28f80348974c5fc9e88012df9fa7b6f8e7e
+$ java -jar agent.jar -jnlpUrl http://localhost:8080/computer/cotainer-build-01/slave-agent.jnlp -secret 75c7c48273db32fdcb0e72d8032cc28f80348974c5fc9e88012df9fa7b6f8e7e	
 ```
 
 ### Global Setup and Teardown
@@ -63,4 +63,54 @@ Rebuilding the images and containers
 ```sh
 $ docker-compose build
 $ docker-compose up -d
+```
+
+# Jenkins
+
+Run robot script using execute shell.
+
+```sh
+$ rm -rf Results/*.xml && \
+$ robot --variable BROWSER:$BROWSER -x junit.xml --outputdir Results --timestampoutputs Projects/GIPA/Grants.robot && rebot --outputdir Results --output output.xml --merge Results/output-*.xml && \
+$ python Results/keywordtimes.py Results/output.xml
+```
+
+## Robot Framework in 3.1.1 Guide using Python3 and higher
+
+### Python 3.7.2
+
+```sh
+Python version directory - (https://www.python.org/ftp/python)
+
+$ wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
+$ tar xzf Python-3.7.2.tgz
+$ cd Python-3.7.2 && ./configure && make install
+```
+
+### RobotFramework Installation to Python 3.7.2
+
+```sh
+$ pip3 install robotframework
+$ robot --version
+
+Robot Framework 3.1.1 (Python 3.7.2 on linux)
+
+```
+
+### JSONLibrary
+
+```sh
+1. git clone https://github.com/nottyo/robotframework-jsonlibrary
+2. cd robotframework-jsonlibrary
+3. Edit the _init.py in the JSONLibrary directory so the imports on line 2 & 3 as follow:
+
+from JSONLibrary.JSONLibraryKeywords import JSONLibraryKeywords
+from JSONLibrary.version import VERSION
+
+and also edit JSONLibraryKeywords.py in line 4:
+
+JSONLibrary.version import VERSION
+
+4. python3 setup.py install
+5. pip3 install ../robotframework-jsonlibrary
 ```
