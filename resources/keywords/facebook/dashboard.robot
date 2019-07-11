@@ -22,8 +22,8 @@ Verify Login form
     Element Should Be Visible    ${password_label}
     Element Should Be Visible    ${username_field}
     Element Should Be Visible    ${password_field}
-    #Element Should Be Visible    ${forgot_account_label}
-    Element Should Be Visible    ${login_button}
+    Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${forgot_account_label}
+    Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${login_button}
 
 Verify Sign Up form
     Set Selenium Speed    1
