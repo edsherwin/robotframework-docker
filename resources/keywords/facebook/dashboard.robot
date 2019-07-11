@@ -13,7 +13,7 @@ Resource          ../../scalars/facebook/facebook_path.txt
 *** Keywords ***
 Open Facebook
     Set Selenium Speed    1
-    Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${Google_Search}
+    Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${username_field}
     Element Should Be Visible    ${username_field}
 
 

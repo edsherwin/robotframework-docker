@@ -12,7 +12,7 @@ Resource          ../../resources/scalars/facebook/facebook_path.txt
 Resource          ../../resources/keywords/facebook/dashboard.robot
 *** Test Cases ***
 Verify Google Search
-    [Documentation]    This TC will open google.com
+    [Documentation]    This TC will open facebook.com
     ...
     ...    @Author: Ed
     [Setup]    Setup    ${URL}
