@@ -16,5 +16,5 @@ Verify Google Search
     ...
     ...    @Author: Ed
     [Setup]    Setup    ${URL}
-    Open Google
+    Open Facebook
     [Teardown]    Teardown
