@@ -10,6 +10,7 @@ The automation test scripts will be executed inside the containers.
 ## Prerequisite
 
 - [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
+- [Docker Compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-18-04)
 
 
 ## Installed Robot Framework 3.1.1 Libraries
@@ -22,12 +23,12 @@ The automation test scripts will be executed inside the containers.
 - [ExcelLibrary]()
 - [FakerLibrary]()
 
-## Other Installed Applications
+## Pre-installed Applications
 
 - Python 2.14
 - Java 8
-- Chromedriver 73.0.3683.68
-- Google Chrome 73.0.3683.103
+- ChromeDriver 75.0.3770.90
+- Google Chrome 75.0.3770.100
 - Firefox
 - Geckodriver
 
@@ -36,13 +37,14 @@ The command below execute in headless.
 ```sh
 robot --variable BROWSER:chrome -x junit.xml --outputdir Results --timestampoutputs project/google/google-search.robot && rebot --outputdir Results --output output.xml --merge results/output-*.xml
 ```
-## Setting the container as build agent along with Jenkins
+## Setting the container as build agent in Jenkins
 
-Below command is configured through Jenkins. 
+Below command is configured through Jenkins.
 
 ```sh
 $ java -jar agent.jar -jnlpUrl http://localhost:8080/computer/cotainer-build-01/slave-agent.jnlp -secret 75c7c48273db32fdcb0e72d8032cc28f80348974c5fc9e88012df9fa7b6f8e7e	
 ```
+java -jar {agent.jar} -jnlpUrl {Url of your Jenkins/name of the node/slave-agent.jnlp} -secret {secret key here}
 
 ### Global Setup and Teardown
 
@@ -67,12 +69,20 @@ $ docker-compose up -d
 
 # Jenkins
 
+## Node properties
+
+Environment variables
+
+Name = BROWSER
+Value = name of browser to used. e.g. chrome
+
+
+
 Run robot script using execute shell.
 
 ```sh
 $ rm -rf Results/*.xml && \
-$ robot --variable BROWSER:$BROWSER -x junit.xml --outputdir Results --timestampoutputs Projects/GIPA/Grants.robot && rebot --outputdir Results --output output.xml --merge Results/output-*.xml && \
-$ python Results/keywordtimes.py Results/output.xml
+$ robot --variable BROWSER:$BROWSER -x junit.xml --outputdir results --timestampoutputs project/google/google-search.robot && rebot --outputdir results --output output.xml --merge results/output-*.xml && \
 ```
 
 ## Robot Framework in 3.1.1 Guide using Python3 and higher

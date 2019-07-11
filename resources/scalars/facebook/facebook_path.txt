@@ -1,0 +1,5 @@
+*** Variables ***
+${Google_Search}    //input[@title='Search']
+${URL}            https://www.facebook.com/
+${username_field}    //input[@id='email']
+${password_field}    //input[@id='pass']

@@ -1,3 +1,0 @@
-*** Variables ***
-${Google_Search}    //input[@title='Search']
-${URL}            https://www.google.com/
