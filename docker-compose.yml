@@ -1,0 +1,31 @@
+version: '2'
+services:
+
+  robotframework-16.04-01:
+    build:
+      context: ./Build/ubuntu-16.04
+      dockerfile: Dockerfile
+    image: rf-0000001
+    #user: "robot"
+    volumes:
+      - robotframework_data:/usr/src/app
+    container_name: robotframework-16.04-01
+    entrypoint: /docker-entrypoint.sh
+    #restart: always
+    tty: true
+
+  # robotframework-18.04-01:
+  #   build:
+  #     context: ./Build/ubuntu-18.04
+  #     dockerfile: Dockerfile
+  #   image: rf-0000002
+  #   user: "robot"
+  #   volumes:
+  #     - robotframework_data:/usr/src/app
+  #   container_name: robotframework-18.04-01
+  #   restart: always
+  #   tty: true
+
+volumes:
+  robotframework_data:
+    driver: local
