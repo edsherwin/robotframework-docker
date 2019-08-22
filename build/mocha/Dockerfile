@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20190515
 
 MAINTAINER "Ed Sherwin" <edsherwin.nonog@gmail.com>
 
@@ -67,5 +67,5 @@ WORKDIR /usr/app
 RUN chmod +x *.sh
 
 # INSTALLATION OF BROWSER DRIVER AND JAVA
-RUN ./driver.sh
-RUN ./java.sh
+#RUN ./driver.sh
+#RUN ./java.sh
