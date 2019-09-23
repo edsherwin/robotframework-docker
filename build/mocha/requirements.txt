@@ -1,0 +1,17 @@
+robotframework 
+robotframework-sshlibrary 
+robotframework-selenium2library 
+robotframework-httplibrary 
+robotframework-requests 
+robotframework-xvfb 
+robotframework-jsonlibrary 
+robotframework-faker 
+robotframework-excellibrary 
+certifi 
+urllib3[secure] 
+openpyxl 
+pyyaml 
+Pillow 
+ndg-httpsclient 
+pyasn1 
+robotframework-metrics==3.1.2
