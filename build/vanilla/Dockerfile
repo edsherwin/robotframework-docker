@@ -81,3 +81,4 @@ RUN apt-get update && apt-get install -y \
     # apt-get update && \
     # apt-get install -y --no-install-recommends oracle-java8-installer oracle-java8-set-default && \
     # apt-get clean all
+##openjdk-8-jre openjdk-8-jdk

@@ -13,15 +13,16 @@ The automation test scripts will be executed inside the containers.
 - [Docker Compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-18-04)
 
 
-## Installed Robot Framework 3.1.1 Libraries
+## Installed Robot Framework 3.1.1 Libraries thu Docker
 
 - [Selenium2Library](https://github.com/robotframework/Selenium2Library)
 - [XvfbLibrary](https://github.com/drobota/robotframework-xvfb)
-- [JSONLibrary]()
-- [HttpLibrary]()
-- [SSHLibrary]()
-- [ExcelLibrary]()
-- [FakerLibrary]()
+- [JSONLibrary](https://pypi.org/project/robotframework-jsonlibrary/)
+- [HttpLibrary](https://github.com/peritus/robotframework-httplibrary)
+- [SSHLibrary](https://github.com/robotframework/SSHLibrary)
+- [ExcelLibrary](https://pypi.org/project/robotframework-excellibrary/)
+- [FakerLibrary](https://pypi.org/project/robotframework-faker/)
+- [Requests](https://github.com/bulkan/robotframework-requests)
 
 ## Pre-installed Applications
 
@@ -33,11 +34,12 @@ The automation test scripts will be executed inside the containers.
 - Geckodriver
 
 ## Usage
-The command below execute in headless.
+The command below will be executed in headless mode.
+
 ```sh
 robot --variable BROWSER:chrome -x junit.xml --outputdir Results --timestampoutputs project/google/google-search.robot && rebot --outputdir Results --output output.xml --merge results/output-*.xml
 ```
-## Setting the container as build agent in Jenkins
+## Setting up the container as build agent in Jenkins
 
 Below command is configured through Jenkins.
 
@@ -68,6 +70,10 @@ $ docker-compose up -d
 ```
 
 # Jenkins
+
+## Note!!!
+
+Make sure you have Jenkins installed in your local machine or server.
 
 ## Node properties
 

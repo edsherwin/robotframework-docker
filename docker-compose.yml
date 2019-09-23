@@ -1,16 +1,29 @@
 version: '2'
 services:
 
-  robotframework-16.04-01:
+  robotframework-mocha:
     build:
-      context: ./Build/ubuntu-16.04
+      context: ./build/mocha
       dockerfile: Dockerfile
-    image: rf-0000001
+    image: rf-mocha
     #user: "robot"
     volumes:
       - robotframework_data:/usr/src/app
-    container_name: robotframework-16.04-01
-    entrypoint: /docker-entrypoint.sh
+    container_name: robotframework-16.04-01-mocha
+    #entrypoint: /docker-entrypoint.sh
+    #restart: always
+    tty: true
+
+  robotframework-fedora:
+    build:
+      context: ./build/fedora
+      dockerfile: Dockerfile
+    image: rf-fedora
+    #user: "robot"
+    volumes:
+      - robotframework_data:/usr/src/app
+    container_name: robotframework-16.04-01-fedora
+    #entrypoint: /docker-entrypoint.sh
     #restart: always
     tty: true
 
