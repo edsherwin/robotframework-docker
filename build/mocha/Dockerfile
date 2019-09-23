@@ -5,8 +5,8 @@ MAINTAINER "Ed Sherwin Nonog" <edsherwin.nonog@gmail.com>
 LABEL name="Docker build for acceptance testing using the robot framework"
 
 #ENTRYPOINT OF SLAVE TO BE CONNECTED THROUGH JENKINS
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
+#COPY docker-entrypoint.sh /docker-entrypoint.sh
+#RUN chmod +x /docker-entrypoint.sh
 
 RUN apt-get update && apt-get install -y \
     build-essential \
