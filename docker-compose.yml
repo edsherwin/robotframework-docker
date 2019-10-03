@@ -14,18 +14,18 @@ services:
     #restart: always
     tty: true
 
-  robotframework-fedora:
-    build:
-      context: ./build/fedora
-      dockerfile: Dockerfile
-    image: rf-fedora
-    #user: "robot"
-    volumes:
-      - robotframework_data:/usr/src/app
-    container_name: robotframework-16.04-01-fedora
-    #entrypoint: /docker-entrypoint.sh
-    #restart: always
-    tty: true
+  # robotframework-fedora:
+  #   build:
+  #     context: ./build/fedora
+  #     dockerfile: Dockerfile
+  #   image: rf-fedora
+  #   #user: "robot"
+  #   volumes:
+  #     - robotframework_data:/usr/src/app
+  #   container_name: robotframework-16.04-01-fedora
+  #   #entrypoint: /docker-entrypoint.sh
+  #   #restart: always
+  #   tty: true
 
   # robotframework-18.04-01:
   #   build:

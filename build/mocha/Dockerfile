@@ -1,4 +1,4 @@
-FROM ubuntu:xenial-20190515
+FROM ubuntu:16.04
 
 MAINTAINER "Ed Sherwin Nonog" <edsherwin.nonog@gmail.com>
 
@@ -15,17 +15,17 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \    
     python-dev \
-    gcc \
+#    gcc \
     phantomjs \
     firefox \
     xvfb \
     wget \
     ca-certificates \
-    ntpdate \
-    libreadline-gplv2-dev \
-    libncursesw5-dev \
-    libsqlite3-dev \
-    libsqlite3-dev \
+#    ntpdate \
+#    libreadline-gplv2-dev \
+#    libncursesw5-dev \
+#    libsqlite3-dev \
+#    libsqlite3-dev \
     tk-dev \
     libgdbm-dev \
     libc6-dev \
@@ -38,7 +38,7 @@ RUN apt-get update && apt-get install -y \
 # PYTHON INSTALLATION
 RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz && tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall
 
-# ROBOTFRAMEWORK INSTALLATION
+# ROBOTFRAMEWORK INSTALLATION DIRECTORY
 #RUN apt-get update && pip install 
 
 #COPY ALL TO WORKING DIRECTORY
@@ -46,7 +46,7 @@ COPY . /usr/app
 
 WORKDIR /usr/app
 
-RUN chmod +x *.sh
+#RUN chmod +x *.sh
 
 RUN pip install -r requirements.txt
 
