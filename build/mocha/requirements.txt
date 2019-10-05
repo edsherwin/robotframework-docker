@@ -9,7 +9,6 @@ robotframework-faker
 robotframework-excellibrary 
 certifi 
 urllib3[secure] 
-openpyxl 
 pyyaml 
 Pillow 
 ndg-httpsclient 
