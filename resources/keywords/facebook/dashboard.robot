@@ -31,3 +31,9 @@ Verify Sign Up form
     Element Should Be Visible    ${its_free_label}
     Element Should Be Visible    ${firstname_field}
     Element Should Be Visible    ${lastname_field}
+
+Open Google
+    Set Selenium Speed    1
+    Wait Until Keyword Succeeds    5    5    Wait Until Page Contains Element    ${search_field}
+    Element Should Be Visible    ${search_field}
+    

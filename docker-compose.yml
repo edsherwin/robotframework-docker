@@ -1,10 +1,12 @@
-version: '2'
+version: '3.2'
 services:
 
   robotframework-mocha:
     build:
       context: ./build/mocha
       dockerfile: Dockerfile
+      cache_from: 
+        -  "${IMAGE_NAME:-rf-mocha}:latest" 
     image: rf-mocha
     #user: "robot"
     volumes:

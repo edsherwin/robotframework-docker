@@ -1,7 +1,5 @@
-FROM ubuntu:18.04
-
-MAINTAINER "Ed Sherwin Nonog" <edsherwin.nonog@gmail.com>
-
+FROM ubuntu:16.04
+#MAINTAINER "Ed Sherwin Nonog" <edsherwin.nonog@gmail.com>
 LABEL name="Docker build for acceptance testing using the robot framework"
 
 WORKDIR /usr/src/app
@@ -42,7 +40,7 @@ RUN apt-get update && apt-get install -y \
      wget
 
 # PYTHON INSTALLATION
-RUN wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz && tar xzf Python-2.7.14.tgz && cd Python-2.7.14 && ./configure --enable-optimations && make altinstall
+RUN wget https://www.python.org/ftp/python/3.7.6/Python-3.7.6.tgz && tar xzf Python-3.7.6.tgz && cd Python-3.7.6 && ./configure --enable-optimations && make altinstall
 
 # ROBOTFRAMEWORK INSTALLATION DIRECTORY
 RUN pip install -r requirements.txt

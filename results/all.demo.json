@@ -1,0 +1,2077 @@
+[
+    {
+        "request": {
+            "method": "GET",
+            "url": "https://jsonplaceholder.typicode.com/users/1",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users/1",
+            "query": {},
+            "body": null,
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:02.380440+00:00",
+                "local": "2019-11-01T11:36:02.380440+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.10664900000000001,
+            "status": 200,
+            "body": {
+                "id": 1,
+                "name": "Leanne Graham",
+                "username": "Bret",
+                "email": "Sincere@april.biz",
+                "address": {
+                    "street": "Kulas Light",
+                    "suite": "Apt. 556",
+                    "city": "Gwenborough",
+                    "zipcode": "92998-3874",
+                    "geo": {
+                        "lat": "-37.3159",
+                        "lng": "81.1496"
+                    }
+                },
+                "phone": "1-770-736-8031 x56442",
+                "website": "hildegard.org",
+                "company": {
+                    "name": "Romaguera-Crona",
+                    "catchPhrase": "Multi-layered client-server neural-net",
+                    "bs": "harness real-time e-markets"
+                }
+            },
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:03 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Transfer-Encoding": "chunked",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=d864fa446205cf6fddfe19cea334d4da01572579363; expires=Sat, 31-Oct-20 03:36:03 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "private, max-age=14400",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"1fd-+2Y3G3w049iSZtw5t1mzSnunngE\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "HIT",
+                "Age": "2480",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead27b2c082874-SJC",
+                "Content-Encoding": "gzip"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "GET https://jsonplaceholder.typicode.com/users/1",
+            "description": "Atest.Test: GET an existing user, notice how the schema gets more accurate",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "null"
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "default": 1,
+                                    "enum": [
+                                        1
+                                    ]
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "default": "Leanne Graham",
+                                    "enum": [
+                                        "Leanne Graham"
+                                    ]
+                                },
+                                "username": {
+                                    "type": "string",
+                                    "default": "Bret"
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "default": "Sincere@april.biz"
+                                },
+                                "address": {
+                                    "type": "object",
+                                    "properties": {
+                                        "street": {
+                                            "type": "string",
+                                            "default": "Kulas Light"
+                                        },
+                                        "suite": {
+                                            "type": "string",
+                                            "default": "Apt. 556"
+                                        },
+                                        "city": {
+                                            "type": "string",
+                                            "default": "Gwenborough"
+                                        },
+                                        "zipcode": {
+                                            "type": "string",
+                                            "default": "92998-3874"
+                                        },
+                                        "geo": {
+                                            "type": "object",
+                                            "properties": {
+                                                "lat": {
+                                                    "type": "string",
+                                                    "default": "-37.3159"
+                                                },
+                                                "lng": {
+                                                    "type": "string",
+                                                    "default": "81.1496"
+                                                }
+                                            },
+                                            "required": [
+                                                "lat",
+                                                "lng"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "city",
+                                        "geo",
+                                        "street",
+                                        "suite",
+                                        "zipcode"
+                                    ]
+                                },
+                                "phone": {
+                                    "type": "string",
+                                    "default": "1-770-736-8031 x56442"
+                                },
+                                "website": {
+                                    "type": "string",
+                                    "default": "hildegard.org"
+                                },
+                                "company": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "default": "Romaguera-Crona"
+                                        },
+                                        "catchPhrase": {
+                                            "type": "string",
+                                            "default": "Multi-layered client-server neural-net"
+                                        },
+                                        "bs": {
+                                            "type": "string",
+                                            "default": "harness real-time e-markets"
+                                        }
+                                    },
+                                    "required": [
+                                        "bs",
+                                        "catchPhrase",
+                                        "name"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "address",
+                                "company",
+                                "email",
+                                "id",
+                                "name",
+                                "phone",
+                                "username",
+                                "website"
+                            ],
+                            "examples": [
+                                {
+                                    "id": 1,
+                                    "name": "Leanne Graham",
+                                    "username": "Bret",
+                                    "email": "Sincere@april.biz",
+                                    "address": {
+                                        "street": "Kulas Light",
+                                        "suite": "Apt. 556",
+                                        "city": "Gwenborough",
+                                        "zipcode": "92998-3874",
+                                        "geo": {
+                                            "lat": "-37.3159",
+                                            "lng": "81.1496"
+                                        }
+                                    },
+                                    "phone": "1-770-736-8031 x56442",
+                                    "website": "hildegard.org",
+                                    "company": {
+                                        "name": "Romaguera-Crona",
+                                        "catchPhrase": "Multi-layered client-server neural-net",
+                                        "bs": "harness real-time e-markets"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "GET",
+            "url": "https://jsonplaceholder.typicode.com/users",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users",
+            "query": {
+                "_limit": "5"
+            },
+            "body": null,
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:03.175931+00:00",
+                "local": "2019-11-01T11:36:03.175931+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.664486,
+            "status": 200,
+            "body": [
+                {
+                    "id": 1,
+                    "name": "Leanne Graham",
+                    "username": "Bret",
+                    "email": "Sincere@april.biz",
+                    "address": {
+                        "street": "Kulas Light",
+                        "suite": "Apt. 556",
+                        "city": "Gwenborough",
+                        "zipcode": "92998-3874",
+                        "geo": {
+                            "lat": "-37.3159",
+                            "lng": "81.1496"
+                        }
+                    },
+                    "phone": "1-770-736-8031 x56442",
+                    "website": "hildegard.org",
+                    "company": {
+                        "name": "Romaguera-Crona",
+                        "catchPhrase": "Multi-layered client-server neural-net",
+                        "bs": "harness real-time e-markets"
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": "Ervin Howell",
+                    "username": "Antonette",
+                    "email": "Shanna@melissa.tv",
+                    "address": {
+                        "street": "Victor Plains",
+                        "suite": "Suite 879",
+                        "city": "Wisokyburgh",
+                        "zipcode": "90566-7771",
+                        "geo": {
+                            "lat": "-43.9509",
+                            "lng": "-34.4618"
+                        }
+                    },
+                    "phone": "010-692-6593 x09125",
+                    "website": "anastasia.net",
+                    "company": {
+                        "name": "Deckow-Crist",
+                        "catchPhrase": "Proactive didactic contingency",
+                        "bs": "synergize scalable supply-chains"
+                    }
+                },
+                {
+                    "id": 3,
+                    "name": "Clementine Bauch",
+                    "username": "Samantha",
+                    "email": "Nathan@yesenia.net",
+                    "address": {
+                        "street": "Douglas Extension",
+                        "suite": "Suite 847",
+                        "city": "McKenziehaven",
+                        "zipcode": "59590-4157",
+                        "geo": {
+                            "lat": "-68.6102",
+                            "lng": "-47.0653"
+                        }
+                    },
+                    "phone": "1-463-123-4447",
+                    "website": "ramiro.info",
+                    "company": {
+                        "name": "Romaguera-Jacobson",
+                        "catchPhrase": "Face to face bifurcated interface",
+                        "bs": "e-enable strategic applications"
+                    }
+                },
+                {
+                    "id": 4,
+                    "name": "Patricia Lebsack",
+                    "username": "Karianne",
+                    "email": "Julianne.OConner@kory.org",
+                    "address": {
+                        "street": "Hoeger Mall",
+                        "suite": "Apt. 692",
+                        "city": "South Elvis",
+                        "zipcode": "53919-4257",
+                        "geo": {
+                            "lat": "29.4572",
+                            "lng": "-164.2990"
+                        }
+                    },
+                    "phone": "493-170-9623 x156",
+                    "website": "kale.biz",
+                    "company": {
+                        "name": "Robel-Corkery",
+                        "catchPhrase": "Multi-tiered zero tolerance productivity",
+                        "bs": "transition cutting-edge web services"
+                    }
+                },
+                {
+                    "id": 5,
+                    "name": "Chelsey Dietrich",
+                    "username": "Kamren",
+                    "email": "Lucio_Hettinger@annie.ca",
+                    "address": {
+                        "street": "Skiles Walks",
+                        "suite": "Suite 351",
+                        "city": "Roscoeview",
+                        "zipcode": "33263",
+                        "geo": {
+                            "lat": "-31.8129",
+                            "lng": "62.5342"
+                        }
+                    },
+                    "phone": "(254)954-1289",
+                    "website": "demarco.info",
+                    "company": {
+                        "name": "Keebler LLC",
+                        "catchPhrase": "User-centric fault-tolerant solution",
+                        "bs": "revolutionize end-to-end systems"
+                    }
+                }
+            ],
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:04 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Transfer-Encoding": "chunked",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=d431318e00f6dd311079ffa407852d2b91572579364; expires=Sat, 31-Oct-20 03:36:04 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "private, max-age=14400",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Total-Count": "10",
+                "Access-Control-Expose-Headers": "X-Total-Count",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"afc-Q0WCfV4hKO155szFqP5PVirQoF4\"",
+                "Content-Encoding": "gzip",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "MISS",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead282b90eed9f-SJC"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "GET https://jsonplaceholder.typicode.com/users",
+            "description": "Atest.Test: GET existing users, use JSONPath for very short but powerful queries",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "null"
+                        },
+                        "query": {
+                            "type": "object",
+                            "properties": {
+                                "_limit": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "_limit"
+                            ]
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "enum": [
+                                                1
+                                            ]
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "username": {
+                                            "type": "string"
+                                        },
+                                        "email": {
+                                            "type": "string"
+                                        },
+                                        "address": {
+                                            "type": "object",
+                                            "properties": {
+                                                "street": {
+                                                    "type": "string"
+                                                },
+                                                "suite": {
+                                                    "type": "string"
+                                                },
+                                                "city": {
+                                                    "type": "string"
+                                                },
+                                                "zipcode": {
+                                                    "type": "string"
+                                                },
+                                                "geo": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "lat": {
+                                                            "type": "string"
+                                                        },
+                                                        "lng": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "lat",
+                                                        "lng"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "city",
+                                                "geo",
+                                                "street",
+                                                "suite",
+                                                "zipcode"
+                                            ]
+                                        },
+                                        "phone": {
+                                            "type": "string"
+                                        },
+                                        "website": {
+                                            "type": "string"
+                                        },
+                                        "company": {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "catchPhrase": {
+                                                    "type": "string"
+                                                },
+                                                "bs": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "bs",
+                                                "catchPhrase",
+                                                "name"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "address",
+                                        "company",
+                                        "email",
+                                        "id",
+                                        "name",
+                                        "phone",
+                                        "username",
+                                        "website"
+                                    ]
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "username": {
+                                            "type": "string"
+                                        },
+                                        "email": {
+                                            "type": "string"
+                                        },
+                                        "address": {
+                                            "type": "object",
+                                            "properties": {
+                                                "street": {
+                                                    "type": "string"
+                                                },
+                                                "suite": {
+                                                    "type": "string"
+                                                },
+                                                "city": {
+                                                    "type": "string"
+                                                },
+                                                "zipcode": {
+                                                    "type": "string"
+                                                },
+                                                "geo": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "lat": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "-37.3159"
+                                                            ]
+                                                        },
+                                                        "lng": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "lat",
+                                                        "lng"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "city",
+                                                "geo",
+                                                "street",
+                                                "suite",
+                                                "zipcode"
+                                            ]
+                                        },
+                                        "phone": {
+                                            "type": "string"
+                                        },
+                                        "website": {
+                                            "type": "string"
+                                        },
+                                        "company": {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "catchPhrase": {
+                                                    "type": "string"
+                                                },
+                                                "bs": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "bs",
+                                                "catchPhrase",
+                                                "name"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "address",
+                                        "company",
+                                        "email",
+                                        "id",
+                                        "name",
+                                        "phone",
+                                        "username",
+                                        "website"
+                                    ]
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "maximum": 5,
+                                            "examples": [
+                                                5
+                                            ]
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "username": {
+                                            "type": "string"
+                                        },
+                                        "email": {
+                                            "type": "string"
+                                        },
+                                        "address": {
+                                            "type": "object",
+                                            "properties": {
+                                                "street": {
+                                                    "type": "string"
+                                                },
+                                                "suite": {
+                                                    "type": "string"
+                                                },
+                                                "city": {
+                                                    "type": "string"
+                                                },
+                                                "zipcode": {
+                                                    "type": "string"
+                                                },
+                                                "geo": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "lat": {
+                                                            "type": "string"
+                                                        },
+                                                        "lng": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "lat",
+                                                        "lng"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "city",
+                                                "geo",
+                                                "street",
+                                                "suite",
+                                                "zipcode"
+                                            ]
+                                        },
+                                        "phone": {
+                                            "type": "string"
+                                        },
+                                        "website": {
+                                            "type": "string"
+                                        },
+                                        "company": {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "catchPhrase": {
+                                                    "type": "string"
+                                                },
+                                                "bs": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "bs",
+                                                "catchPhrase",
+                                                "name"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "address",
+                                        "company",
+                                        "email",
+                                        "id",
+                                        "name",
+                                        "phone",
+                                        "username",
+                                        "website"
+                                    ]
+                                }
+                            ],
+                            "examples": [
+                                [
+                                    {
+                                        "id": 1,
+                                        "name": "Leanne Graham",
+                                        "username": "Bret",
+                                        "email": "Sincere@april.biz",
+                                        "address": {
+                                            "street": "Kulas Light",
+                                            "suite": "Apt. 556",
+                                            "city": "Gwenborough",
+                                            "zipcode": "92998-3874",
+                                            "geo": {
+                                                "lat": "-37.3159",
+                                                "lng": "81.1496"
+                                            }
+                                        },
+                                        "phone": "1-770-736-8031 x56442",
+                                        "website": "hildegard.org",
+                                        "company": {
+                                            "name": "Romaguera-Crona",
+                                            "catchPhrase": "Multi-layered client-server neural-net",
+                                            "bs": "harness real-time e-markets"
+                                        }
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Ervin Howell",
+                                        "username": "Antonette",
+                                        "email": "Shanna@melissa.tv",
+                                        "address": {
+                                            "street": "Victor Plains",
+                                            "suite": "Suite 879",
+                                            "city": "Wisokyburgh",
+                                            "zipcode": "90566-7771",
+                                            "geo": {
+                                                "lat": "-43.9509",
+                                                "lng": "-34.4618"
+                                            }
+                                        },
+                                        "phone": "010-692-6593 x09125",
+                                        "website": "anastasia.net",
+                                        "company": {
+                                            "name": "Deckow-Crist",
+                                            "catchPhrase": "Proactive didactic contingency",
+                                            "bs": "synergize scalable supply-chains"
+                                        }
+                                    },
+                                    {
+                                        "id": 3,
+                                        "name": "Clementine Bauch",
+                                        "username": "Samantha",
+                                        "email": "Nathan@yesenia.net",
+                                        "address": {
+                                            "street": "Douglas Extension",
+                                            "suite": "Suite 847",
+                                            "city": "McKenziehaven",
+                                            "zipcode": "59590-4157",
+                                            "geo": {
+                                                "lat": "-68.6102",
+                                                "lng": "-47.0653"
+                                            }
+                                        },
+                                        "phone": "1-463-123-4447",
+                                        "website": "ramiro.info",
+                                        "company": {
+                                            "name": "Romaguera-Jacobson",
+                                            "catchPhrase": "Face to face bifurcated interface",
+                                            "bs": "e-enable strategic applications"
+                                        }
+                                    },
+                                    {
+                                        "id": 4,
+                                        "name": "Patricia Lebsack",
+                                        "username": "Karianne",
+                                        "email": "Julianne.OConner@kory.org",
+                                        "address": {
+                                            "street": "Hoeger Mall",
+                                            "suite": "Apt. 692",
+                                            "city": "South Elvis",
+                                            "zipcode": "53919-4257",
+                                            "geo": {
+                                                "lat": "29.4572",
+                                                "lng": "-164.2990"
+                                            }
+                                        },
+                                        "phone": "493-170-9623 x156",
+                                        "website": "kale.biz",
+                                        "company": {
+                                            "name": "Robel-Corkery",
+                                            "catchPhrase": "Multi-tiered zero tolerance productivity",
+                                            "bs": "transition cutting-edge web services"
+                                        }
+                                    },
+                                    {
+                                        "id": 5,
+                                        "name": "Chelsey Dietrich",
+                                        "username": "Kamren",
+                                        "email": "Lucio_Hettinger@annie.ca",
+                                        "address": {
+                                            "street": "Skiles Walks",
+                                            "suite": "Suite 351",
+                                            "city": "Roscoeview",
+                                            "zipcode": "33263",
+                                            "geo": {
+                                                "lat": "-31.8129",
+                                                "lng": "62.5342"
+                                            }
+                                        },
+                                        "phone": "(254)954-1289",
+                                        "website": "demarco.info",
+                                        "company": {
+                                            "name": "Keebler LLC",
+                                            "catchPhrase": "User-centric fault-tolerant solution",
+                                            "bs": "revolutionize end-to-end systems"
+                                        }
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "POST",
+            "url": "https://jsonplaceholder.typicode.com/users",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users",
+            "query": {},
+            "body": {
+                "id": 11,
+                "name": "Gil Alexander"
+            },
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:03.942367+00:00",
+                "local": "2019-11-01T11:36:03.942367+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.672762,
+            "status": 201,
+            "body": {
+                "id": 11,
+                "name": "Gil Alexander"
+            },
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:05 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Content-Length": "41",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=d7cc0b347a4b4a71ebd9877d5d150c0051572579365; expires=Sat, 31-Oct-20 03:36:05 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "Access-Control-Expose-Headers": "Location",
+                "Location": "http://jsonplaceholder.typicode.com/users/11",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"29-vwadRDXFbEpkaUdCGXjGG0gAgN8\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "DYNAMIC",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead2877aac93ac-SJC"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "POST https://jsonplaceholder.typicode.com/users",
+            "description": "Atest.Test: POST with valid params to create a new user, can be output to a file",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "name"
+                            ]
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "default": 11
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "default": "Gil Alexander"
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "name"
+                            ]
+                        },
+                        "status": {
+                            "type": "integer",
+                            "enum": [
+                                201
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "PUT",
+            "url": "https://jsonplaceholder.typicode.com/users/2",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users/2",
+            "query": {},
+            "body": {
+                "isCoding": true
+            },
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:04.646582+00:00",
+                "local": "2019-11-01T11:36:04.646582+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.691431,
+            "status": 200,
+            "body": {
+                "isCoding": true,
+                "id": 2
+            },
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:05 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Content-Length": "33",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=d578b48220c5c5c0e4a1bf75375be12fa1572579365; expires=Sat, 31-Oct-20 03:36:05 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"21-DV5+10Tma4JhuhmpHM6u0RWdfl4\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "DYNAMIC",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead28be9af6da0-SJC"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "PUT https://jsonplaceholder.typicode.com/users/2",
+            "description": "Atest.Test: PUT with valid params to update the existing user, values matter here",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "isCoding": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "isCoding"
+                            ]
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "isCoding": {
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "id": {
+                                    "type": "integer",
+                                    "default": 2
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "isCoding"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "PUT",
+            "url": "https://jsonplaceholder.typicode.com/users/2",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users/2",
+            "query": {},
+            "body": {
+                "sleep": null
+            },
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:05.393839+00:00",
+                "local": "2019-11-01T11:36:05.393839+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.742574,
+            "status": 200,
+            "body": {
+                "sleep": null,
+                "id": 2
+            },
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:06 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Content-Length": "30",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=da9425cdce1eba6b207fd3aa3f6582fcf1572579366; expires=Sat, 31-Oct-20 03:36:06 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"1e-f8rR4jtP14bq7yNnFkQeDFt/oT0\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "DYNAMIC",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead2901a1692aa-SJC"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "PUT https://jsonplaceholder.typicode.com/users/2",
+            "description": "Atest.Test: PUT with valid params to update the existing user, values matter here",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "sleep": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "sleep"
+                            ]
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "sleep": {
+                                    "type": "null",
+                                    "default": null
+                                },
+                                "id": {
+                                    "type": "integer",
+                                    "default": 2
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "sleep"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "PUT",
+            "url": "https://jsonplaceholder.typicode.com/users/2",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users/2",
+            "query": {},
+            "body": {
+                "pockets": "",
+                "money": 0.02
+            },
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:06.083409+00:00",
+                "local": "2019-11-01T11:36:06.083409+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.682258,
+            "status": 200,
+            "body": {
+                "pockets": "",
+                "money": 0.02,
+                "id": 2
+            },
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:07 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Content-Length": "47",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=df5d443eb742737f3af7d853e12606f971572579367; expires=Sat, 31-Oct-20 03:36:07 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"2f-nwzUP+CtSr7+T4dCpEFgDP57arc\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "DYNAMIC",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead294ee3bed1b-SJC"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "PUT https://jsonplaceholder.typicode.com/users/2",
+            "description": "Atest.Test: PUT with valid params to update the existing user, values matter here",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "pockets": {
+                                    "type": "string"
+                                },
+                                "money": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "money",
+                                "pockets"
+                            ]
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "pockets": {
+                                    "type": "string",
+                                    "default": "",
+                                    "enum": [
+                                        ""
+                                    ]
+                                },
+                                "money": {
+                                    "type": "number",
+                                    "default": 0.02,
+                                    "enum": [
+                                        0.02
+                                    ]
+                                },
+                                "id": {
+                                    "type": "integer",
+                                    "default": 2
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "money",
+                                "pockets"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "GET",
+            "url": "https://jsonplaceholder.typicode.com/users/3",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users/3",
+            "query": {},
+            "body": null,
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:06.627991+00:00",
+                "local": "2019-11-01T11:36:06.627991+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.505509,
+            "status": 200,
+            "body": {
+                "id": 3,
+                "name": "Clementine Bauch",
+                "username": "Samantha",
+                "email": "Nathan@yesenia.net",
+                "address": {
+                    "street": "Douglas Extension",
+                    "suite": "Suite 847",
+                    "city": "McKenziehaven",
+                    "zipcode": "59590-4157",
+                    "geo": {
+                        "lat": "-68.6102",
+                        "lng": "-47.0653"
+                    }
+                },
+                "phone": "1-463-123-4447",
+                "website": "ramiro.info",
+                "company": {
+                    "name": "Romaguera-Jacobson",
+                    "catchPhrase": "Face to face bifurcated interface",
+                    "bs": "e-enable strategic applications"
+                }
+            },
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:07 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Transfer-Encoding": "chunked",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=d87ba910a86db8a786d45fc82d1abed341572579367; expires=Sat, 31-Oct-20 03:36:07 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "private, max-age=14400",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"208-uuwhfwQMzFzbJr9Pg6DKXae0SXA\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "HIT",
+                "Age": "2911",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead2996fb1ed9b-SJC",
+                "Content-Encoding": "gzip"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "GET https://jsonplaceholder.typicode.com/users/3",
+            "description": "Atest.Test: PATCH with valid params, reusing response properties as a new payload",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "null"
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "default": 3
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "default": "Clementine Bauch",
+                                    "enum": [
+                                        "Clementine Bauch"
+                                    ]
+                                },
+                                "username": {
+                                    "type": "string",
+                                    "default": "Samantha"
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "default": "Nathan@yesenia.net"
+                                },
+                                "address": {
+                                    "type": "object",
+                                    "properties": {
+                                        "street": {
+                                            "type": "string",
+                                            "default": "Douglas Extension"
+                                        },
+                                        "suite": {
+                                            "type": "string",
+                                            "default": "Suite 847"
+                                        },
+                                        "city": {
+                                            "type": "string",
+                                            "default": "McKenziehaven"
+                                        },
+                                        "zipcode": {
+                                            "type": "string",
+                                            "default": "59590-4157"
+                                        },
+                                        "geo": {
+                                            "type": "object",
+                                            "properties": {
+                                                "lat": {
+                                                    "type": "string",
+                                                    "default": "-68.6102"
+                                                },
+                                                "lng": {
+                                                    "type": "string",
+                                                    "default": "-47.0653"
+                                                }
+                                            },
+                                            "required": [
+                                                "lat",
+                                                "lng"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "city",
+                                        "geo",
+                                        "street",
+                                        "suite",
+                                        "zipcode"
+                                    ]
+                                },
+                                "phone": {
+                                    "type": "string",
+                                    "default": "1-463-123-4447"
+                                },
+                                "website": {
+                                    "type": "string",
+                                    "default": "ramiro.info"
+                                },
+                                "company": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "default": "Romaguera-Jacobson"
+                                        },
+                                        "catchPhrase": {
+                                            "type": "string",
+                                            "default": "Face to face bifurcated interface"
+                                        },
+                                        "bs": {
+                                            "type": "string",
+                                            "default": "e-enable strategic applications"
+                                        }
+                                    },
+                                    "required": [
+                                        "bs",
+                                        "catchPhrase",
+                                        "name"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "address",
+                                "company",
+                                "email",
+                                "id",
+                                "name",
+                                "phone",
+                                "username",
+                                "website"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "PATCH",
+            "url": "https://jsonplaceholder.typicode.com/users/4",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users/4",
+            "query": {},
+            "body": {
+                "name": "Clementine Bauch"
+            },
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:07.372432+00:00",
+                "local": "2019-11-01T11:36:07.372432+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.720591,
+            "status": 200,
+            "body": {
+                "id": 4,
+                "name": "Clementine Bauch",
+                "username": "Karianne",
+                "email": "Julianne.OConner@kory.org",
+                "address": {
+                    "street": "Hoeger Mall",
+                    "suite": "Apt. 692",
+                    "city": "South Elvis",
+                    "zipcode": "53919-4257",
+                    "geo": {
+                        "lat": "29.4572",
+                        "lng": "-164.2990"
+                    }
+                },
+                "phone": "493-170-9623 x156",
+                "website": "kale.biz",
+                "company": {
+                    "name": "Robel-Corkery",
+                    "catchPhrase": "Multi-tiered zero tolerance productivity",
+                    "bs": "transition cutting-edge web services"
+                }
+            },
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:08 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Transfer-Encoding": "chunked",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=dc1775ee943aaf001da10e134f4ef9f281572579368; expires=Sat, 31-Oct-20 03:36:08 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"20d-x8r9/SBcLJkx09MnkXTwkoWznWg\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "DYNAMIC",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead29c896b6e24-SJC",
+                "Content-Encoding": "gzip"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "PATCH https://jsonplaceholder.typicode.com/users/4",
+            "description": "Atest.Test: PATCH with valid params, reusing response properties as a new payload",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name"
+                            ]
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "default": 4
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "default": "Clementine Bauch",
+                                    "enum": [
+                                        "Clementine Bauch"
+                                    ]
+                                },
+                                "username": {
+                                    "type": "string",
+                                    "default": "Karianne"
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "default": "Julianne.OConner@kory.org"
+                                },
+                                "address": {
+                                    "type": "object",
+                                    "properties": {
+                                        "street": {
+                                            "type": "string",
+                                            "default": "Hoeger Mall"
+                                        },
+                                        "suite": {
+                                            "type": "string",
+                                            "default": "Apt. 692"
+                                        },
+                                        "city": {
+                                            "type": "string",
+                                            "default": "South Elvis"
+                                        },
+                                        "zipcode": {
+                                            "type": "string",
+                                            "default": "53919-4257"
+                                        },
+                                        "geo": {
+                                            "type": "object",
+                                            "properties": {
+                                                "lat": {
+                                                    "type": "string",
+                                                    "default": "29.4572"
+                                                },
+                                                "lng": {
+                                                    "type": "string",
+                                                    "default": "-164.2990"
+                                                }
+                                            },
+                                            "required": [
+                                                "lat",
+                                                "lng"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "city",
+                                        "geo",
+                                        "street",
+                                        "suite",
+                                        "zipcode"
+                                    ]
+                                },
+                                "phone": {
+                                    "type": "string",
+                                    "default": "493-170-9623 x156"
+                                },
+                                "website": {
+                                    "type": "string",
+                                    "default": "kale.biz"
+                                },
+                                "company": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "default": "Robel-Corkery"
+                                        },
+                                        "catchPhrase": {
+                                            "type": "string",
+                                            "default": "Multi-tiered zero tolerance productivity"
+                                        },
+                                        "bs": {
+                                            "type": "string",
+                                            "default": "transition cutting-edge web services"
+                                        }
+                                    },
+                                    "required": [
+                                        "bs",
+                                        "catchPhrase",
+                                        "name"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "address",
+                                "company",
+                                "email",
+                                "id",
+                                "name",
+                                "phone",
+                                "username",
+                                "website"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "PATCH",
+            "url": "https://jsonplaceholder.typicode.com/users/5",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users/5",
+            "query": {},
+            "body": {
+                "name": "Julie Langford"
+            },
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:08.110434+00:00",
+                "local": "2019-11-01T11:36:08.110434+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.706212,
+            "status": 200,
+            "body": {
+                "id": 5,
+                "name": "Julie Langford",
+                "username": "Kamren",
+                "email": "Lucio_Hettinger@annie.ca",
+                "address": {
+                    "street": "Skiles Walks",
+                    "suite": "Suite 351",
+                    "city": "Roscoeview",
+                    "zipcode": "33263",
+                    "geo": {
+                        "lat": "-31.8129",
+                        "lng": "62.5342"
+                    }
+                },
+                "phone": "(254)954-1289",
+                "website": "demarco.info",
+                "company": {
+                    "name": "Keebler LLC",
+                    "catchPhrase": "User-centric fault-tolerant solution",
+                    "bs": "revolutionize end-to-end systems"
+                }
+            },
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:09 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Transfer-Encoding": "chunked",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=db17e11b7ebaf097fe64bddaa1ac2655a1572579369; expires=Sat, 31-Oct-20 03:36:09 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"1f9-43wXd9MlXzctSyKYNc9jQip2MBc\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "DYNAMIC",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead2a16db31e6f-SJC",
+                "Content-Encoding": "gzip"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "PATCH https://jsonplaceholder.typicode.com/users/5",
+            "description": "Atest.Test: PATCH with valid params, reusing response properties as a new payload",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name"
+                            ]
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "default": 5
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "default": "Julie Langford",
+                                    "enum": [
+                                        "Julie Langford"
+                                    ]
+                                },
+                                "username": {
+                                    "type": "string",
+                                    "default": "Kamren"
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "default": "Lucio_Hettinger@annie.ca"
+                                },
+                                "address": {
+                                    "type": "object",
+                                    "properties": {
+                                        "street": {
+                                            "type": "string",
+                                            "default": "Skiles Walks"
+                                        },
+                                        "suite": {
+                                            "type": "string",
+                                            "default": "Suite 351"
+                                        },
+                                        "city": {
+                                            "type": "string",
+                                            "default": "Roscoeview"
+                                        },
+                                        "zipcode": {
+                                            "type": "string",
+                                            "default": "33263"
+                                        },
+                                        "geo": {
+                                            "type": "object",
+                                            "properties": {
+                                                "lat": {
+                                                    "type": "string",
+                                                    "default": "-31.8129"
+                                                },
+                                                "lng": {
+                                                    "type": "string",
+                                                    "default": "62.5342"
+                                                }
+                                            },
+                                            "required": [
+                                                "lat",
+                                                "lng"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "city",
+                                        "geo",
+                                        "street",
+                                        "suite",
+                                        "zipcode"
+                                    ]
+                                },
+                                "phone": {
+                                    "type": "string",
+                                    "default": "(254)954-1289"
+                                },
+                                "website": {
+                                    "type": "string",
+                                    "default": "demarco.info"
+                                },
+                                "company": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "default": "Keebler LLC"
+                                        },
+                                        "catchPhrase": {
+                                            "type": "string",
+                                            "default": "User-centric fault-tolerant solution"
+                                        },
+                                        "bs": {
+                                            "type": "string",
+                                            "default": "revolutionize end-to-end systems"
+                                        }
+                                    },
+                                    "required": [
+                                        "bs",
+                                        "catchPhrase",
+                                        "name"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "address",
+                                "company",
+                                "email",
+                                "id",
+                                "name",
+                                "phone",
+                                "username",
+                                "website"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    },
+    {
+        "request": {
+            "method": "DELETE",
+            "url": "https://jsonplaceholder.typicode.com/users/6",
+            "scheme": "https",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users/6",
+            "query": {},
+            "body": null,
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "proxies": {},
+            "timeout": [
+                null,
+                null
+            ],
+            "cert": null,
+            "sslVerify": true,
+            "allowRedirects": true,
+            "timestamp": {
+                "utc": "2019-11-01T03:36:08.824160+00:00",
+                "local": "2019-11-01T11:36:08.824160+08:00"
+            }
+        },
+        "response": {
+            "seconds": 0.688678,
+            "status": 200,
+            "body": {},
+            "headers": {
+                "Date": "Fri, 01 Nov 2019 03:36:10 GMT",
+                "Content-Type": "application/json; charset=utf-8",
+                "Content-Length": "2",
+                "Connection": "keep-alive",
+                "Set-Cookie": "__cfduid=d5bd45eefc75ba8778bf4e7a4e61ed0581572579369; expires=Sat, 31-Oct-20 03:36:09 GMT; path=/; domain=.typicode.com; HttpOnly",
+                "X-Powered-By": "Express",
+                "Vary": "Origin, Accept-Encoding",
+                "Access-Control-Allow-Credentials": "true",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
+                "Expires": "-1",
+                "X-Content-Type-Options": "nosniff",
+                "Etag": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
+                "Via": "1.1 vegur",
+                "CF-Cache-Status": "DYNAMIC",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Server": "cloudflare",
+                "CF-RAY": "52ead2a60c5e9340-SJC"
+            }
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "DELETE https://jsonplaceholder.typicode.com/users/6",
+            "description": "Atest.Test: DELETE the existing successfully, save the history of all requests",
+            "default": true,
+            "examples": [],
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "null"
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "object",
+                    "properties": {
+                        "body": {
+                            "type": "object"
+                        },
+                        "status": {
+                            "type": "integer",
+                            "enum": [
+                                200,
+                                202,
+                                204
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "spec": {}
+    }
+]

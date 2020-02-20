@@ -1,6 +1,6 @@
 *** Variables ***
 ${Google_Search}    //input[@title='Search']
-${URL}            https://www.facebook.com/
+${URL}            https://www.google.com/
 ${username_field}    //input[@id='email']
 ${password_field}    //input[@id='pass']
 ${login_button}    //input[@id='u_0_10']
@@ -14,3 +14,4 @@ ${lastname_field}    //name[@name='lastname']
 ${email_mobile_field}    //input[@name='reg_email__']
 ${form_password_field}    //input[@name='reg_passwd__']
 ${birth_month_field}    //select[@id='month']
+${search_field}    //input[@name='q']

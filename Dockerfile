@@ -45,6 +45,9 @@ RUN apt-get update && pip install \
     robotframework-jsonlibrary \
     robotframework-faker \
     robotframework-excellibrary \
+    robotframework-historic \
+    robotframework-historic-parser \
+    robotframework-historic-listener \
     certifi \
     urllib3[secure] \
     openpyxl \
