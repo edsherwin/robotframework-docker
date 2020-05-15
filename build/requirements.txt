@@ -1,0 +1,8 @@
+robotframework 
+robotframework-sshlibrary 
+robotframework-selenium2library 
+robotframework-httplibrary 
+robotframework-requests 
+robotframework-xvfb 
+robotframework-jsonlibrary 
+robotframework-faker

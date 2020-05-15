@@ -1,45 +1,21 @@
 version: '3.2'
+
 services:
 
-  robotframework-mocha:
+  robotframework-docker:
     build:
-      context: ./build/mocha
+      context: ./build
       dockerfile: Dockerfile
-      cache_from: 
-        -  "${IMAGE_NAME:-rf-mocha}:latest" 
-    image: rf-mocha
+      #cache_from: 
+      #  -  "${IMAGE_NAME:docker-robot}:latest" 
+    image: docker-robot
     #user: "robot"
     volumes:
       - robotframework_data:/usr/src/app
-    container_name: robotframework-16.04-01-mocha
+    container_name: docker-robot-v1
     #entrypoint: /docker-entrypoint.sh
     #restart: always
     tty: true
-
-  # robotframework-fedora:
-  #   build:
-  #     context: ./build/fedora
-  #     dockerfile: Dockerfile
-  #   image: rf-fedora
-  #   #user: "robot"
-  #   volumes:
-  #     - robotframework_data:/usr/src/app
-  #   container_name: robotframework-16.04-01-fedora
-  #   #entrypoint: /docker-entrypoint.sh
-  #   #restart: always
-  #   tty: true
-
-  # robotframework-18.04-01:
-  #   build:
-  #     context: ./Build/ubuntu-18.04
-  #     dockerfile: Dockerfile
-  #   image: rf-0000002
-  #   user: "robot"
-  #   volumes:
-  #     - robotframework_data:/usr/src/app
-  #   container_name: robotframework-18.04-01
-  #   restart: always
-  #   tty: true
 
 volumes:
   robotframework_data:

@@ -9,3 +9,4 @@ library/allure-robotframework-0.1.3
 library/robotframework-allurereport
 geckodriver.log
 Library/__pycache__
+__pycache_
